@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "app-dashboard"
+    }
+  },
+  "defaultProject": "app-dashboard",
+  "cli": {
+    "analytics": false
+  }
 }
