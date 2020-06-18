@@ -1,1 +1,208 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    box-sizing: border-box;
+}
+
+/*Global css variable for avoid repeating width variable*/
+:root {
+    --main-width: 1000px;
+}
+
+#goToTop {
+    display: none;
+}
+
+/*Top navigation bar*/
+/* .navbar-dark .navbar-nav .nav-link {
+    color: #ffff;
+} */
+
+.navigation-bar {
+    overflow: hidden;
+    background-color: rgb(255, 255, 255);
+}
+
+.navigation-bar a {
+    float: left;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: #ffff;
+}
+
+.nav-link {
+    color: white;
+}
+
+
+
+.right-side {
+    float: right;
+}
+
+.navigation-bar a:hover {
+    background-color: #ddd;
+    color: black;
+
+}
+
+.navigation-bar a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+
+
+/*Side navigation menu*/
+.side-navigation {
+    float: left;
+    width: 4%;
+    height: var(--main-width);
+    background: #424242;
+    padding: 20px;
+}
+
+
+.side-navigation ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.side-navigation a {
+    color: #ffffff;
+    display: block;
+}
+
+
+
+
+/*Inside content*/
+
+article {
+    float: left;
+    padding: 20px;
+    width: 96%;
+    background-color: #f1f1f1;
+    height: var(--main-width);
+}
+
+
+section:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/*Search box*/
+.search-portal {
+    padding: 20px 0px;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+}
+
+.card {
+    height: 250px;
+    margin-bottom: 20px;
+}
+
+/*Open incident table*/
+.open-incidents {
+    height: 350px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    background-color: #ffff;
+}
+
+
+/*Footer*/
+
+.footer-upper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding-left: 5%;
+    background-color: #0275d8;
+}
+
+.footer-upper a {
+    float: left;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: #ffff;
+}
+
+
+.footer-lower {
+
+    position: absolute;
+    width: 100%;
+    margin-top: 2px;
+    overflow: hidden;
+    padding-left: 5%;
+    background-color: #0275d8;
+}
+
+.footer-lower a {
+    float: left;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: #ffff;
+}
+
+.site-performance {
+    padding-left: 20px;
+}
+
+
+
+@media (max-width: 768px) {
+
+    .side-navigation {
+        display: none !important;
+    }
+
+    .navigation-bar,
+    article {
+        width: 100%;
+        height: auto;
+    }
+
+    .open-incidents {
+
+        overflow-x: scroll;
+        overflow-y: scroll;
+    }
+
+    .footer-lower,
+    .footer-upper {
+        display: none;
+    }
+
+    /**/
+    #goToTop {
+        display: flex;
+        width: 50px;
+        height: 50px;
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 30px;
+        z-index: 99;
+        border: none;
+        outline: none;
+        font-size: 25px !important;
+        color: white;
+        cursor: pointer;
+        padding: 10px 10px 10px 11px;
+        border-radius: 50%;
+        box-shadow: 1px 1px 5px #000;
+        background-color: #0275d8;
+    }
+
+    #myBtn:hover {
+        background-color: #0275d8;
+    }
+
+
+}
